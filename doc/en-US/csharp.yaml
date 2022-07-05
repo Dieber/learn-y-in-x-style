@@ -7,3 +7,11 @@ languages:
     articles:
       - title: TypeScript for C# Programmers
         url: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html"
+
+  - name: Rust
+    articles:
+      - title: From C# to Rust
+        url: https://sebnilsson.com/blog/from-csharp-to-rust-introduction
+
+      - title: C# to Rust Cheat Sheet
+        url: https://gist.github.com/carols10cents/47f87b480e35f65897bf
