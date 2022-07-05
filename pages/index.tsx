@@ -91,14 +91,13 @@ export default function Home() {
                         width: DOT_SIZE,
                         height: DOT_SIZE,
                         left: index * GAP,
-                        borderRadius: BORDER_RADIUS,
                       }}
                     >
                       <Image
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/icon/${item}.png`}
+                        src={`/static/icon/${item}.png`}
                       ></Image>
                     </div>
                   );
@@ -121,14 +120,13 @@ export default function Home() {
                         width: DOT_SIZE,
                         height: DOT_SIZE,
                         top: index * GAP,
-                        borderRadius: BORDER_RADIUS,
                       }}
                     >
                       <Image
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/icon/${item}.png`}
+                        src={`/static/icon/${item}.png`}
                       ></Image>
                     </div>
                   );
@@ -146,7 +144,7 @@ export default function Home() {
                   return rowItem.map((colItem, colIndex) => {
                     return (
                       <div
-                        key={colItem.findedItem?.name}
+                        key={`${rowIndex}-${colIndex}`}
                         style={{
                           position: "absolute",
                           cursor: "pointer",
