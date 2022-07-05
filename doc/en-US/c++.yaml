@@ -1,0 +1,9 @@
+# where X is C++, Ys (What you want to learn) are in this yaml:
+
+name: C++
+description: null
+languages:
+  - name: Rust
+    articles:
+      - title: Rust For Systems Programmers
+        url: "https://github.com/nrc/r4cppp#contents"

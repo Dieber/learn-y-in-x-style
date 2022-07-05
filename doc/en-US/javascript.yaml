@@ -1,0 +1,22 @@
+# where X is Javascript, Ys (What you want to learn) are in this yaml:
+
+name: Javascript
+description: null
+languages:
+  - name: Rust
+    articles:
+      - title: node.js to Rust
+        url: "https://vino.dev/blog/node-to-rust-day-1-rustup/"
+
+  - name: Typescript
+    articles:
+      - title: TypeScript for JavaScript Programmers
+        url: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+
+  - name: Go
+    articles:
+      - title: Go for Javascript Developers
+        url: "http://www.pazams.com/Go-for-Javascript-Developers/"
+
+      - title: Golang for Node.js Developers
+        url: "https://github.com/miguelmota/golang-for-nodejs-developers"

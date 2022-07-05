@@ -1,0 +1,14 @@
+# where X is Java, Ys (What you want to learn) are in this yaml:
+
+name: Java
+description: null
+languages:
+  - name: Typescript
+    articles:
+      - title: TypeScript for Java/C# Programmers
+        url: "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html"
+
+  - name: Javascript
+    articles:
+      - title: Javascript for Java Developers
+        url: https://blog.angular-university.io/javascript-for-java-developers/
