@@ -1,6 +1,6 @@
 # where X is C++, Ys (What you want to learn) are in this yaml:
 
-name: C++
+name: Cpp
 description: null
 languages:
   - name: Rust
