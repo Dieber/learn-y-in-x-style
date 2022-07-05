@@ -97,7 +97,7 @@ export default function Home() {
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/static/icon/${item}.png`}
+                        src={`/icon/c++.png`}
                       ></Image>
                     </div>
                   );
@@ -126,7 +126,7 @@ export default function Home() {
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/static/icon/${item}.png`}
+                        src={`/icon/rust.png`}
                       ></Image>
                     </div>
                   );
