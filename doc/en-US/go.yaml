@@ -1,0 +1,9 @@
+# where X is Go, Ys (What you want to learn) are in this yaml:
+
+name: Go
+description: null
+languages:
+  - name: Rust
+    articles:
+      - title: An Introduction To Rust Ownership For Go Developers
+        url: https://itnext.io/an-introduction-to-rust-ownership-for-go-developers-moves-part-1-413450497d4d
