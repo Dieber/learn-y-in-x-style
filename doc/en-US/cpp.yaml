@@ -7,3 +7,8 @@ languages:
     articles:
       - title: Rust For Systems Programmers
         url: "https://github.com/nrc/r4cppp#contents"
+
+  - name: Java
+    articles:
+      - title: A Crash Course from C++ to Java
+        url: https://horstmann.com/ccc/c_to_java.pdf
