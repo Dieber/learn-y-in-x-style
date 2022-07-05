@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/future/image";
 import ExternalLink from "../component/ExternalLink";
 import { useState } from "react";
 import docs from "./api/docs.json";
