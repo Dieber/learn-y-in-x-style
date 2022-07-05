@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/future/image";
+import Image from "next/image";
 import ExternalLink from "../component/ExternalLink";
 import { useState } from "react";
 import docs from "./api/docs.json";
@@ -97,7 +97,7 @@ export default function Home() {
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/images/${item}.png`}
+                        src={`/images/${item.toLowerCase()}.png`}
                       ></Image>
                     </div>
                   );
@@ -126,7 +126,7 @@ export default function Home() {
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/images/${item}.png`}
+                        src={`/images/${item.toLowerCase()}.png`}
                       ></Image>
                     </div>
                   );
