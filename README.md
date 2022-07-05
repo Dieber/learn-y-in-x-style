@@ -25,8 +25,8 @@ npm run dev
 
 then modify the yaml file in the doc folder (Don't forget to refresh your browser).
 
-### add icon
+### add language image
 
-Feel free to add icons to the public/icon folder.
+Feel free to add icons to the public/images folder.
 
 You need to make sure the filename of the icon and the "name" tag in YAML are consistent
