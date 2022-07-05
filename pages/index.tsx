@@ -3,6 +3,7 @@ import Image from "next/image";
 import ExternalLink from "../component/ExternalLink";
 import { useState } from "react";
 import docs from "./api/docs.json";
+import Script from "next/script";
 
 const DOT_SIZE = 30;
 const BORDER_RADIUS = DOT_SIZE / 4;
