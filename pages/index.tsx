@@ -68,7 +68,7 @@ export default function Home() {
           <h1>Learn Y in X Style</h1>
           <p>
             Learning a new programming language through an existing mental
-            model. Community-driven, just like
+            model. Community-driven, just like{" "}
             <ExternalLink
               title="Learn X in Y minutes"
               url="https://learnxinyminutes.com/"
