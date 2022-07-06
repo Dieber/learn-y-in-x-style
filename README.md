@@ -2,7 +2,7 @@
 
 [Learn Y in X style](https://learnyinxstyle.com)
 
-Learning a new programming language through an existing mental model. Also, Community-driven! Inspired by Learn X in Y minutes.
+Learning a new programming language through an existing mental model. Also, Community-driven! Inspired by [Learn X in Y minutes](https://learnxinyminutes.com)
 
 We need your contribution
 
