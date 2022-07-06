@@ -27,6 +27,6 @@ then modify the yaml file in the doc folder (Don't forget to refresh your browse
 
 ### add language image
 
-Feel free to add icons to the public/images folder.
+Feel free to add icons to the public/language_images folder.
 
-You need to make sure the filename of the icon and the "name" tag in YAML are consistent
+You need to make sure the filename of the icon and the "name" tag in YAML are consistent (case-insensitive)

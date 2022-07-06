@@ -4,6 +4,7 @@ import ExternalLink from "../component/ExternalLink";
 import { useState } from "react";
 import docs from "./api/docs.json";
 import Script from "next/script";
+import Color from "color";
 
 const DOT_SIZE = 30;
 const BORDER_RADIUS = DOT_SIZE / 4;
@@ -20,6 +21,7 @@ type YLanguage = {
 
 export default function Home() {
   const [activeItem, setActiveItem] = useState<YLanguage | null>(null);
+  const [hoverItem, setHoverItem] = useState<YLanguage | null>(null);
 
   // resolve JSON from YAML file
   const rowName = docs.map((item) => item.name);
@@ -40,13 +42,13 @@ export default function Home() {
   // transform to cell with status
   const allCellsInfo = allLangs.map((row, rowIndex) => {
     return allLangs.map((col, colIndex) => {
-      let findedItem = docs
+      let existedItem = docs
         .find((item) => item.name === row)
         ?.languages.find((item) => item.name === col);
-      return findedItem
+      return existedItem
         ? {
-            isHover: false, // TODO: Hover Effect
-            findedItem,
+            isHover: existedItem === hoverItem,
+            existedItem,
           }
         : {
             isHover: false,
@@ -98,7 +100,7 @@ export default function Home() {
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/images/${item.toLowerCase()}.png`}
+                        src={`/language_images/${item.toLowerCase()}.png`}
                       ></Image>
                     </div>
                   );
@@ -127,7 +129,7 @@ export default function Home() {
                         alt={item}
                         width={DOT_SIZE}
                         height={DOT_SIZE}
-                        src={`/images/${item.toLowerCase()}.png`}
+                        src={`/language_images/${item.toLowerCase()}.png`}
                       ></Image>
                     </div>
                   );
@@ -143,6 +145,27 @@ export default function Home() {
               >
                 {allCellsInfo.map((rowItem, rowIndex) => {
                   return rowItem.map((colItem, colIndex) => {
+                    const existedColor = "#39d353";
+                    const existHoverColor = Color(existedColor)
+                      .darken(0.1)
+                      .hex();
+                    const notExistColor = "#CCC";
+                    const activeColor = Color(existedColor).darken(0.2).hex();
+
+                    let cellBackgroundColor;
+                    if (colItem.existedItem === activeItem) {
+                      cellBackgroundColor = activeColor;
+                    } else if (
+                      colItem.existedItem &&
+                      colItem.existedItem === hoverItem
+                    ) {
+                      cellBackgroundColor = existHoverColor;
+                    } else if (colItem.existedItem) {
+                      cellBackgroundColor = existedColor;
+                    } else {
+                      cellBackgroundColor = notExistColor;
+                    }
+
                     return (
                       <div
                         key={`${rowIndex}-${colIndex}`}
@@ -154,13 +177,18 @@ export default function Home() {
                           top: rowIndex * GAP,
                           left: colIndex * GAP,
                           borderRadius: BORDER_RADIUS,
-                          backgroundColor: colItem.findedItem
-                            ? "#39d353"
-                            : "#CCC",
+                          backgroundColor: cellBackgroundColor,
+                        }}
+                        onMouseOver={() => {
+                          colItem.existedItem &&
+                            setHoverItem(colItem.existedItem);
+                        }}
+                        onMouseOut={() => {
+                          setHoverItem(null);
                         }}
                         onClick={() => {
-                          colItem.findedItem &&
-                            setActiveItem(colItem.findedItem);
+                          colItem.existedItem &&
+                            setActiveItem(colItem.existedItem);
                         }}
                       ></div>
                     );
