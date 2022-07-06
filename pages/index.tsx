@@ -171,7 +171,7 @@ export default function Home() {
                         key={`${rowIndex}-${colIndex}`}
                         style={{
                           position: "absolute",
-                          cursor: "pointer",
+                          cursor: colItem.existedItem ? "pointer" : "default",
                           width: DOT_SIZE,
                           height: DOT_SIZE,
                           top: rowIndex * GAP,

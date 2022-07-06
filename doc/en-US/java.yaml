@@ -12,3 +12,8 @@ languages:
     articles:
       - title: Javascript for Java Developers
         url: https://blog.angular-university.io/javascript-for-java-developers/
+
+  - name: Rust
+    articles:
+      - title: Rust for Java developers
+        url: https://blog.codecentric.de/en/2020/09/rust-for-java-developers/
